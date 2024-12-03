@@ -1,0 +1,99 @@
+/* Fond tectonique animé, subtil et plus raffiné */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3f2121; /* Fond sombre de la terre */
+    position: relative;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Lueur d'énergie sismique, pulsée sur tout l'écran */
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 69, 0, 0.3), transparent);
+    z-index: 0;
+    animation: pulse 8s ease-in-out infinite;
+    opacity: 0.3;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.4);
+    }
+  }
+  
+  /* Style de la carte, stable et centrée */
+  #map {
+    height: 70vh;
+    width: 50vw;
+    border-radius: 20px;
+    background: #333333; /* Texture plus sombre */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8); /* Ombre forte autour de la carte */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 2px solid rgba(255, 69, 0, 0.8); /* Bordure éclatante */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Effet de lumière autour de la carte */
+  #map:hover {
+    box-shadow: 0 30px 100px rgba(255, 69, 0, 0.9); /* Lueur orange autour de la carte */
+    transform: scale(1.05); /* Légère augmentation de taille au survol */
+  }
+  
+  /* Sélecteur de région, style dynamique */
+  /* Sélecteur de région, compact et moderne */
+.region-select {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: rgba(255, 69, 0, 0.7);
+    box-shadow: 0 4px 6px rgba(192, 20, 20, 0.3);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    z-index: 2;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.region-select:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 69, 0, 0.8);
+}
+
+/* Label simplifié avec un style plus subtil */
+.region-select label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px;
+    display: block;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.6); /* Éclat plus léger */
+}
+
+/* Sélecteur de régions, compact et élégant */
+#regionSelect {
+    width: 160px;
+    padding: 8px;
+    font-size: 0.9rem;
+    border: 1.5px solid rgba(255, 69, 0, 0.8);
+    border-radius: 6px;
+    background: rgba(255, 69, 0, 0.15);
+    color: #fff;
+    transition: all 0.3s ease;
+}
